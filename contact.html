@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLux - Contact</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <nav class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="logo">
+        <span>AutoLux</span>
+    </div>
+
+    <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="vehicules.html">Véhicules</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+    <section class="contact">
+        <h2>Contactez-nous</h2>
+        <form>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+    <div class="chatbot">
+    <div class="chat-header">AutoLux Assistant</div>
+
+    <div class="chat-body" id="chatBody"></div>
+
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Pose ta question...">
+        <button onclick="sendMessage()">➤</button>
+    </div>
+</div>
+
+   <footer class="footer">
+    <div class="footer-container">
+
+        <!-- Logo + description -->
+        <div class="footer-section">
+            <h2>AutoLux</h2>
+            <p>L'excellence automobile à votre portée. Découvrez les meilleures voitures de luxe au meilleur prix.</p>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email : contact@autolux.com</p>
+            <p>Téléphone : +229 01 23 45 67</p>
+            <p>Localisation : Cotonou, Bénin</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2024 AutoLux - Tous droits réservés</p>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

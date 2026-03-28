@@ -1,0 +1,554 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    background: #000;
+    /* noir plus profond */
+    color: #fff;
+    padding-top: 90px;
+    /* espace a */
+    font-family: 'Poppins', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ===== HERO BANNER ===== */
+.hero-banner {
+    background-image: url('https://images.unsplash.com/photo-1622046120199-32f27980473d?w=1600');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* overlay sombre */
+.overlay {
+    background: rgba(0, 0, 0, 0.50);
+    height: 100%;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed;
+    /* FIX important */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+/* ===== LOGO ===== */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 50px;
+}
+.logo span {
+    color: white;
+    font-weight: bold;
+}
+
+.logo img {
+    filter: brightness(1.5); /* rend le logo plus visible */
+}
+/* ===== MENU ===== */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+/* hover underline */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: red;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* ===== TEXTE HERO ===== */
+.hero-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 0 0 15px rgba(0,0,0,0.8);
+}
+
+.hero-text p {
+    font-size: 20px;
+    color: #ddd;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+/* ===== SECTION VOITURES ===== */
+.featured {
+    padding: 60px 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1400px;
+    margin: auto;
+    background: #000;
+}
+
+.featured h2 {
+    grid-column: 1 / -1;
+    color: red;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(255,0,0,0.5);
+}
+
+
+/* ===== CARTE VOITURE ===== */
+.car {
+    background: #1c1c1c;
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    /* IMPORTANT pour badge */
+    transition: 0.3s;
+}
+
+.car img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.car:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(255, 0, 0, 0.3);
+}
+
+.car h3 {
+    margin-top: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+.car p {
+    margin-top: 10px;
+    color: gold;
+    font-weight: bold;
+}
+
+/* ===== BADGE DISPONIBILITÉ ===== */
+.status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Disponible */
+.disponible {
+    background: #00c853;
+    color: white;
+    box-shadow: 0 0 10px #00c853;
+}
+
+/* Indisponible */
+.indisponible {
+    background: #ff1744;
+    color: white;
+    box-shadow: 0 0 10px #ff1744;
+}
+/* ===== FIX CHATBOT ===== */
+
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header */
+.chat-header {
+    background: red;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* body */
+.chat-body {
+    height: 220px;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+    background: #f5f5f5;
+    color: black;
+}
+
+/* input container */
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+/* input */
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: white;
+    color: black;
+}
+
+/* bouton */
+.chat-input button {
+    width: 60px;
+    background: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #111;
+    color: #ccc;
+    padding: 50px 20px 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section h2,
+.footer-section h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: red;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+/* ===== FORMULAIRE ===== */
+.contact {
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+    
+    
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+.contact button {
+    margin-top: 15px;
+    padding: 10px;
+    background: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact button:hover {
+    background: darkred;
+}
+
+/* ===== ABOUT ===== */
+.about {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    background: #000;
+}
+
+.about h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: red;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #ddd;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.about-card {
+    background: #1c1c1c;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+.about-card h3 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.3);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    gap: 20px;
+   background-color: #000;
+    padding: 40px 20px;
+}
+.stats p {
+    color: #ccc;
+}
+
+.stats h2 {
+    color: red;
+    font-size: 32px;
+}
+/* messages style bulle */
+.msg {
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    font-size: 14px;
+}
+
+/* utilisateur */
+.user {
+    background: red;
+    color: white;
+    margin-left: auto;
+    text-align: right;
+}
+
+/* bot */
+.bot {
+    background: #eee;
+    color: black;
+    margin-right: auto;
+}
+
+/* animation */
+.msg {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .featured {
+        grid-template-columns: 1fr;
+    }
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 10px;
+    background: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cars-list {
+    padding: 60px 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.cars-list h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ===== RESPONSIVE GLOBAL ===== */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    /* HERO */
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    /* SECTIONS */
+    .featured,
+    .cars-list {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    /* CARTES */
+    .car img {
+        height: 180px;
+    }
+
+    /* ABOUT */
+    .about {
+        padding: 40px 15px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about h1 {
+        font-size: 28px;
+    }
+
+    /* STATS */
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* CHATBOT */
+    .chatbot {
+        width: 90%;
+        right: 5%;
+        bottom: 10px;
+    }
+
+    .chat-body {
+        height: 180px;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

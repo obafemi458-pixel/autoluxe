@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLux - Accueil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER / BANNIÈRE -->
+   <header class="hero-banner">
+    <div class="overlay">
+
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+                <span>AutoLux</span>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="vehicules.html">Véhicules</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-text">
+            <h1>AUTOLUX</h1>
+            <p>L'excellence automobile à votre portée</p>
+        </div>
+
+    </div>
+</header>
+
+<section class="carousel-section">
+    <h2 style="text-align:center; color:white; margin-bottom:30px;">
+    ...
+</h2>
+
+ <div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="images/lamborghini.avif" class="d-block w-100" alt="lamborghini">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/Tesla-cybertruck.avif" class="d-block w-100" alt="cybertruck">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/porsche-911.avif" class="d-block w-100" alt="porsche">
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+ </div>
+
+</section>
+
+    <!-- SECTION VOITURES -->
+    <section class="featured">
+        <h2>Nos modèles phares</h2>
+
+        <div class="car">
+            <img src="images/Tesla-cybertruck.avif" alt="Tesla">
+            <h3>Tesla Model S</h3>
+            <p>À partir de <strong>250 000 €</strong></p>
+        </div>
+
+        <div class="car">
+            <img src="images/lamborghini.avif" alt="Lamborghini">
+            <h3>Lamborghini</h3>
+            <p>À partir de <strong>250 000 €</strong></p>
+        </div>
+
+    </section>
+    <div class="chatbot">
+    <div class="chat-header">AutoLux Assistant</div>
+
+    <div class="chat-body" id="chatBody"></div>
+
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Pose ta question...">
+        <button onclick="sendMessage()">➤</button>
+    </div>
+</div>
+
+    <!-- FOOTER -->
+   <footer class="footer">
+    <div class="footer-container">
+
+        <!-- Logo + description -->
+        <div class="footer-section">
+            <h2>AutoLux</h2>
+            <p>L'excellence automobile à votre portée. Découvrez les meilleures voitures de luxe au meilleur prix.</p>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email : contact@autolux.com</p>
+            <p>Téléphone : +229 01 23 45 67</p>
+            <p>Localisation : Cotonou, Bénin</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2024 AutoLux - Tous droits réservés</p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
